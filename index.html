@@ -21,13 +21,7 @@
           height: 100%;
           overflow: hidden;
         }
-        .banner{
-          display: block;
-          width: 100%;
-          height: 100%;
-          overflow: hidden;
-        }
-      .ggl{
+        .ggl{
           position: relative;
           top:25px;
           width: 100%;
@@ -36,17 +30,23 @@
           background-size: 100% 100%;
         }
         .canvas{
-        position:absolute;
-        top: -100px;
-        bottom: 0px;
-        width:100%;
-        height:200%;
-        line-height:100%;
-        text-align:center;
-        z-index: 2;
-      }
+          position:absolute;
+          top: -100px;
+          bottom: 0px;
+          width:100%;
+          height:200%;
+          line-height:100%;
+          text-align:center;
+          z-index: 2;
+        }
+        .banner{
+          display: none;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
         .banner2{
-          display: block;
+          display: none;
           width: 100%;
           height: 100%;
           overflow: hidden;
@@ -57,16 +57,17 @@
   <body>
   <img src="img/300piao_logo1.png" class="share" id="share"/>
     <div class="ggl" id="top">
+    <canvas id="c1" class="canvas"></canvas>
     <img src="img/dianyingpiao.png" class="banner" id="banner"/>
     <img src="img/feijipiao.png" class="banner2" id="banner2"/>
-    <canvas id="c1" class="canvas"></canvas>
     </div>
     <script>
       //控制刮卡次数
       var t = 1; 
       //初始化所有数据并且随机产生奖品
       var initialize  = function () {
-        // document.getElementById("share").style.display = "block";
+        document.getElementById("banner").style.display = "block";
+        document.getElementById("banner2").style.display = "block";
       };
     
       var c1;       //画布
